@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="final_assignment" type="controller.py" name="controller" output="screen"/>
+  <node pkg="final_assignment" type="assitistive_drive.py" name="assitistive_drive" output="screen"/>
+</launch>

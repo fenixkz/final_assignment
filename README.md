@@ -16,7 +16,9 @@ This project is dependent on several libraries that need to be installed on your
 
 '
 $ git clone https://github.com/CarmineD8/slam_gmapping.git
-$ suo apt-get install ros-<your_ros_distro>-navigation
+'
+'
+$ sudo apt-get install ros-<your_ros_distro>-navigation
 '
 
 

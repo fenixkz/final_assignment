@@ -14,12 +14,11 @@ The interface is implemented within the terminal, so user have to input the desi
 The project is done on Ubuntu 16.04 and ROS Kinetic. 
 This project is dependent on several libraries that need to be installed on your local machine. This can be done by executing the following commands:
 
-'
+`
 $ git clone https://github.com/CarmineD8/slam_gmapping.git
-'
-'
+
 $ sudo apt-get install ros-<your_ros_distro>-navigation
-'
+`
 
 
 ## Installing 

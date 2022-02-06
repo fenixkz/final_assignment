@@ -52,4 +52,6 @@ The left side is considered the value of the angles in the range: [-90°; -45°]
 
 The right side is considered the value of the angles in the range: [45°; 90°]
 
+## Flowchart
+
 ![text](https://github.com/fenixkz/rt_third/blob/main/RT_3.png)

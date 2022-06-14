@@ -19,8 +19,7 @@ $ git clone https://github.com/CarmineD8/slam_gmapping.git
 `
 
 `
-$ sudo apt-get install ros-<your_ros_distro>-navigation
-$ sudo apt-get install ros-<your_ros_distro>-gazebo-ros-pkgs ros-<your_ros_distro>-gazebo-ros-control
+$ sudo apt-get install ros-<your_ros_distro>-navigation ros-<your_ros_distro>-openslam-gmapping ros-<your_ros_distro>-gazebo-ros-pkgs ros-<your_ros_distro>-gazebo-ros-control
 `
 
 

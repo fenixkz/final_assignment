@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to RT_Assignment3’s documentation! &mdash; RT_Assignment3 February 6, 2022 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> RT_Assignment3
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to RT_Assignment3’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-controller">User Interface Module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">RT_Assignment3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to RT_Assignment3’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="welcome-to-rt-assignment3-s-documentation">
+<h1>Welcome to RT_Assignment3’s documentation!<a class="headerlink" href="#welcome-to-rt-assignment3-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="module-controller">
+<span id="user-interface-module"></span><h1>User Interface Module<a class="headerlink" href="#module-controller" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-controller_ui"></span><dl>
+<dt>ROS node that implements a user interface in the terminal. The user interface is consisted of four choices:</dt><dd><ul class="simple">
+<li><p>Robot will autonomously reach the desired x and y coordinate</p></li>
+<li><p>Manual control of the robot</p></li>
+<li><p>Manual control of the robot with assistive mode, to avoid crashes</p></li>
+<li><p>Exit the interface</p></li>
+</ul>
+</dd>
+<dt>Libraries:</dt><dd><p><a class="reference external" href="https://pypi.org/project/numpy/">NumPy</a>: Array computing for python</p>
+<p><a class="reference external" href="http://wiki.ros.org/rospy">rospy</a>: ROS bridge for Python</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/time.html">time</a>: Time-related functions</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/termios.html">termios</a>: POSIX calls for tty I/O control</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/sys.html">sys</a>: System-specific parameters and functions</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/tty.html">tty</a>: Terminal control functions</p>
+</dd>
+<dt>Publishes to:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">/move_base/goal</span></code> the goal position to move the robot</p>
+<p><code class="docutils literal notranslate"><span class="pre">/move_base/cancel</span></code> if the cancel call is given to cancel the previously set goal position</p>
+<p><code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> the desired robot velocities</p>
+</dd>
+<dt>Retrieve from:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">/move_base/status</span></code> id and status of the goal position</p>
+<p><code class="docutils literal notranslate"><span class="pre">/move_base/feedback</span></code> x, y position of the robot</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.calculateMinDistance">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">calculateMinDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#calculateMinDistance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.calculateMinDistance" title="Permalink to this definition"></a></dt>
+<dd><p>Function to calculate the minimal distance
+from the robot to the obstacle, from the left side, right side and from frontal side</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array of doubles</em>) – array of data from laser scan.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>tuple containing:</dt><dd><ul class="simple">
+<li><p><strong>minDistanceLeft</strong> (double): distance to the closest obstacle on the left</p></li>
+<li><p><strong>minDistanceFront</strong> (double): distance to the closest obstacle in front</p></li>
+<li><p><strong>minDistanceRight</strong> (double): distance to the closest obstacle on the right</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.first_choice">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">first_choice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#first_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.first_choice" title="Permalink to this definition"></a></dt>
+<dd><p>Function to autonomously reach the desired x,y coordinate. Corresponds to the first choise of UI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>1</strong> if done</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The completion of the goal position is checked via calculating the Euclidean distance between the goal and the
+actual position. The threshold is set to 0.3, but can be changed to be more accurate.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.getch">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">getch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#getch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.getch" title="Permalink to this definition"></a></dt>
+<dd><p>Function to get the user input without having to press enter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A char that was given by the user.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>char</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.main">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.main" title="Permalink to this definition"></a></dt>
+<dd><p>Main function. Constantly waits for the user choice and then runs the corresponding
+function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The choice is has to be an integer from 1 to 4</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.manual_drive">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">manual_drive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#manual_drive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.manual_drive" title="Permalink to this definition"></a></dt>
+<dd><p>Function that get the user input and transform it into appropriate velocities.
+For the second and third choice, to map the input to the appropriate output</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>tuple containing:</dt><dd><ul class="simple">
+<li><p><strong>x_vel</strong> (double): speed along x-axis</p></li>
+<li><p><strong>z_ang</strong> (double): angular velocity around z-axis</p></li>
+<li><p><strong>done</strong> (bool): the user exitted the UI</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.my_print">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">my_print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#my_print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.my_print" title="Permalink to this definition"></a></dt>
+<dd><p>Function to simulate a UI to give the user a set of options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.second_choice">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">second_choice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#second_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.second_choice" title="Permalink to this definition"></a></dt>
+<dd><p>Function to manually control the robot
+:param None:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>1</strong> if done</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The function accepts the control of WASD type. Either low or upper key. Also, to constantly move
+the user has to push the corresponding button continuously, not only press one time.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controller.third_choice">
+<span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">third_choice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/controller.html#third_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#controller.third_choice" title="Permalink to this definition"></a></dt>
+<dd><p>Function for manual control with assistance. It allows the user to drive the robot manually, but
+prevents it from crashing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>1</strong> if done</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Ayan Mazhitov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

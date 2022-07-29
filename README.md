@@ -11,7 +11,7 @@ This project presents a user interface to control the robot inside the Gazebo si
 The interface is implemented within the terminal, so user have to input the desired choice to the terminal. 
 
 ## Requirements
-The project is done on Ubuntu 16.04 and ROS Kinetic. 
+The project is done on Ubuntu 20.04 and ROS Noetic. 
 This project is dependent on several libraries that need to be installed on your local machine. This can be done by executing the following commands:
 
 `

@@ -47,7 +47,7 @@ $ jupyter notebook
 open the .ipynb file and run all cells
 
 ## Documentation
-Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/rt_third/)
+Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/final_assignment/)
 
 ## Statistics (not a part of this repository, but rather a part of RT2 coursework)
 The idea was to compare two solutions for the RT1 first assignment. [Mine](https://github.com/fenixkz/rt1_assigment1) and [one](https://github.com/CarmineD8/python_simulator/tree/rt2) given by the professor. For that reason I used statistical analysis approach to either confirm or deny a hypothesis that both solutions are the same in the terms of time of completion a lap. 

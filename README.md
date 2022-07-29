@@ -31,11 +31,20 @@ $ catkin_make
 `
 
 ## Running
+
+### Python script
 There are two main processes that need to be launched, each in different terminals:
 ```
 $ roslaunch final_assignment combined.launch 
 $ rosrun final_assignment controller.py 
 ```
+### Jupyter Notebook
+```
+$ roslaunch final_assignment combined.launch 
+$ cd jupyter-notebooks/
+$ jupyter notebook
+```
+open the .ipynb file and run all cells
 
 ## Documentation
 Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/rt_third/)

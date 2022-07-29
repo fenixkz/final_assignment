@@ -55,7 +55,8 @@ Another important concept is the **level of significance**. In this case a 5% le
 
 In this testing, the same map has tested both techniques separately. Every time the same algorithm is run, the position of the silver tokens in the environment shifts, but the position of the golden tokens stays the same.
 ### Paired T-test
-As was said in the lectures, the paired T-test is a prefereable method of testing. A sample size of 20 trials is taken. In the .csv file inside this repository the data can be found. After calculation of the T-statistic (1.63) and value from T-table (2.086), we can conclude that the **Null Hypothesis is accepted**.
+As was said in the lectures, the paired T-test is a prefereable method of testing. A sample size of 20 trials is taken. In the image below the data can be found. After calculation of the T-statistic (1.63) and value from T-table (2.086), we can conclude that the **Null Hypothesis is accepted**.
+![Screenshot from 2022-07-29 18-46-37](https://user-images.githubusercontent.com/35328429/181806531-c1ebdb01-1df2-40ce-a723-06e6bd97e7d2.png)
 
 ## Implementation details
 The first option is done by getting the user x,y desired coordinates and publishing this coordinated to /move_base/goal topic. Then, the distance is calculated between the current position of the robot and the desired position. If the distance is less than 0.3, then we can conclude that the robot achieved the goal position.

@@ -38,7 +38,7 @@ $ rosrun final_assignment controller.py
 ```
 
 ## Documentation
-Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/rt_third/)
+Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/final_assignment/)
 
 ## Implementation details
 The first option is done by getting the user x,y desired coordinates and publishing this coordinated to /move_base/goal topic. Then, the distance is calculated between the current position of the robot and the desired position. If the distance is less than 0.3, then we can conclude that the robot achieved the goal position.

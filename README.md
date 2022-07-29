@@ -40,6 +40,21 @@ $ rosrun final_assignment controller.py
 ## Documentation
 Documentation is online and can be viewed by the link [here](https://fenixkz.github.io/rt_third/)
 
+## Statistics (not a part of this repository, but rather a part of RT2 coursework)
+The idea was to compare two solutions for the RT1 first assignment. [Mine](https://github.com/fenixkz/rt1_assigment1) and [one](https://github.com/CarmineD8/python_simulator/tree/rt2) given by the professor. For that reason I used statistical analysis approach to either confirm or deny a hypothesis that both solutions are the same in the terms of time of completion a lap. 
+
+In statistical analysis field, the **Null Hypothesis** (H_0) is referred to a fact that if we are to compare method A with method B about its superiority and if we proceed on the assumption that both methods are equally good, then this assumption is termed as the null hypothesis. As against this, we may think that the method A is superior or the method B is inferior, we are then stating what is termed as alternative hypothesis (H_a).
+
+It was decided to use the average time needed to finish one lap of the circuit as a performance evaluator. So, in the term of this metric, the hypothesises can be defined as follows: 
+**H_0** - using both algorithms, the robot completes a lap of the track in roughly the same amount of time.
+**H_a** - using both algorithms, the robot does not complete a lap of the track in roughly the same amount of time
+
+Another important concept is the **level of significance**. In this case a 5% level of significance is chosen.
+
+In this testing, the same map has tested both techniques separately. Every time the same algorithm is run, the position of the silver tokens in the environment shifts, but the position of the golden tokens stays the same.
+# Paired T-test
+As was said in the lectures, the paired T-test is a prefereable method of testing. A sample size of 20 trials is taken. In the .csv file inside this repository the data can be found. After calculation of the T-statistic (1.63) and value from T-table (2.086), we can conclude that the **Null Hypothesis is accepted**.
+
 ## Implementation details
 The first option is done by getting the user x,y desired coordinates and publishing this coordinated to /move_base/goal topic. Then, the distance is calculated between the current position of the robot and the desired position. If the distance is less than 0.3, then we can conclude that the robot achieved the goal position.
 
